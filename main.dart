@@ -446,23 +446,23 @@
 //   print('Updated name: ${person.name}');
 //   person.name = '';
 // }
-class Scessors {
-  String? _color;
+// class Scessors {
+//   String? _color;
 
-  String? get color {
-    return this._color;
-  }
+//   String? get color {
+//     return this._color;
+//   }
 
-  void set color(red) {
-    _color = red;
-  }
-}
+//   void set color(red) {
+//     _color = red;
+//   }
+// }
 
-void main() {
-  Scessors scessors = Scessors();
-  scessors.color = 'red';
-  print(scessors.color);
-}
+// void main() {
+//   Scessors scessors = Scessors();
+//   scessors.color = 'red';
+//   print(scessors.color);
+// }
 
 // void main() {
 //   List<int> numbers = [1, 2, 3, 4, 5];
@@ -473,3 +473,36 @@ void main() {
 //   }
 //   print(numb.reversed);
 // }
+
+class Animal {
+  String name;
+  Animal(this.name);
+  void makeSound() {
+    print('$name is making a sound.');
+  }
+}
+
+class Dog extends Animal {
+  Dog(String name) : super(name);
+  @override
+  void makeSound() {
+    print('$name is barking.');
+  }
+}
+
+class Cat extends Animal {
+  Cat(String name) : super(name);
+
+  @override
+  void makeSound() {
+    print('$name is meowing.');
+  }
+}
+
+void main() {
+  Dog dog = Dog('KuKu');
+  Cat cat = Cat('Radha');
+
+  dog.makeSound();
+  cat.makeSound();
+}
