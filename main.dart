@@ -474,35 +474,166 @@
 //   print(numb.reversed);
 // }
 
+// class Animal {
+//   String name;
+//   Animal(this.name);
+//   void makeSound() {
+//     print('$name is making a sound.');
+//   }
+// }
+
+// class Dog extends Animal {
+//   Dog(String name) : super(name);
+//   @override
+//   void makeSound() {
+//     print('$name is barking.');
+//   }
+// }
+
+// class Cat extends Animal {
+//   Cat(String name) : super(name);
+
+//   @override
+//   void makeSound() {
+//     print('$name is meowing.');
+//   }
+// }
+
+// void main() {
+//   Dog dog = Dog('KuKu');
+//   Cat cat = Cat('Radha');
+
+//   dog.makeSound();
+//   cat.makeSound();
+// }
+
+// class Vehicle {
+//   String brand;
+//   int year;
+//   double mileage;
+//   Vehicle(this.brand, this.year, this.mileage);
+//   void displayInfo() {
+//     print("Brand: $brand");
+//     print("Year: $year");
+//     print("Mileage: $mileage km");
+//   }
+// }
+
+// class ElectricVehicle extends Vehicle {
+//   double batteryCapacity;
+//   double currentCharge;
+//   // Constructor for ElectricVehicle
+//   ElectricVehicle(String brand, int year, double mileage, this.batteryCapacity,
+//       this.currentCharge)
+//       : super(brand, year, mileage); // Call to Vehicle's constructor
+//   // Method to charge the battery
+//   void charge(double amount) {
+//     if (amount > 0) {
+//       currentCharge += amount;
+//       if (currentCharge > batteryCapacity) {
+//         currentCharge = batteryCapacity; // Cap the charge at battery capacity
+//       }
+//       print("Charged to $currentCharge");
+//     } else {
+//       print("Invalid");
+//     }
+//   }
+
+//   @override
+//   void displayInfo() {
+//     super.displayInfo(); // Call the base class method
+//     print("Battery Capacity: $batteryCapacity");
+//     print("Current Charge: $currentCharge");
+//   }
+// }
+
+// void main() {
+//   var tesla = ElectricVehicle("Tesla", 2024, 15000.0, 100.0, 50.0);
+//   tesla.displayInfo();
+//   tesla.charge(30);
+//   // Display updated information
+//   tesla.displayInfo();
+// }
+
+// void main(){
+//   List <int> num = [1,2,3,4,5];
+//     print(num.reversed);
+//   }
+
+// void main() {
+//   List<int> lst = [1, 2, 3, 4, 5];
+
+//   for (int i = lst.length - 1; i >= 0; i--) {
+//     print(lst[i]);
+//   }
+// }
+
+// void main() {
+//   List<int> lst = [1, 2, 3, 4, 5];
+//   List<int> reversedList = [];
+
+//   for (int i = lst.length - 1; i >= 0; i--) {
+//     reversedList.add(lst[i]);
+//   }
+
+//   print(reversedList);
+// }
+// void main() {
+//   List<int> lst = [1, 2, 3, 4, 5];
+
+//   // Create a reversed copy of the list
+//   List<int> reversedList = List.from(lst.reversed);
+
+//   // Now reversedList contains the reversed elements
+//   print(reversedList);
+// }
+// void main() {
+//   List<int> lst = [1, 2, 3, 4, 5];
+
+//   int start = 0;
+//   int end = lst.length - 1;
+
+//   while (start < end) {
+//     int temp = lst[start];
+//     lst[start] = lst[end];
+//     lst[end] = temp;
+
+//     start++;
+//     end--;
+//   }
+
+//   print(lst);
+// }
+// OOPS mein extends aur impleements keyword ke beech antar jaanen aur usake lie ek prograam likhen.
+
 class Animal {
-  String name;
-  Animal(this.name);
-  void makeSound() {
-    print('$name is making a sound.');
+  void eat(){}
+  void sleep(){}
+  void aaa(int a){
+    print('');
   }
 }
 
-class Dog extends Animal {
-  Dog(String name) : super(name);
+class Mammal extends Animal {
   @override
-  void makeSound() {
-    print('$name is barking.');
+  void eat() {
+    print("Mammal is eating.");
   }
-}
-
-class Cat extends Animal {
-  Cat(String name) : super(name);
 
   @override
-  void makeSound() {
-    print('$name is meowing.');
+  void sleep() {
+    print("Mammal is sleeping.");
+  }
+
+  @override
+  void aaa(int a){
+    print(a);
   }
 }
 
 void main() {
-  Dog dog = Dog('KuKu');
-  Cat cat = Cat('Radha');
-
-  dog.makeSound();
-  cat.makeSound();
+  Mammal mammal = Mammal();
+  mammal.aaa(10);
+  mammal.eat();
+  mammal.sleep();
 }
