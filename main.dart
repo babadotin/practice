@@ -606,34 +606,62 @@
 // }
 // OOPS mein extends aur impleements keyword ke beech antar jaanen aur usake lie ek prograam likhen.
 
+// class Animal {
+//   void eat(){}
+//   void sleep(){}
+//   void aaa(int a){
+//     print('');
+//   }
+// }
+
+// class Mammal extends Animal {
+//   @override
+//   void eat() {
+//     print("Mammal is eating.");
+//   }
+
+//   @override
+//   void sleep() {
+//     print("Mammal is sleeping.");
+//   }
+
+//   @override
+//   void aaa(int a){
+//     print(a);
+//   }
+// }
+
+// void main() {
+//   Mammal mammal = Mammal();
+//   mammal.aaa(10);
+//   mammal.eat();
+//   mammal.sleep();
+// }
+
 class Animal {
-  void eat(){}
-  void sleep(){}
-  void aaa(int a){
-    print('');
+  void eat() {
+    print("This dog eats food.");
   }
 }
 
-class Mammal extends Animal {
-  @override
+class Dog extends Animal {
+  void bark() {
+    print("Dog barks.");
+  }
+
   void eat() {
-    print("Mammal is eating.");
-  }
-
-  @override
-  void sleep() {
-    print("Mammal is sleeping.");
-  }
-
-  @override
-  void aaa(int a){
-    print(a);
+    print("This dog eats food.");
   }
 }
 
 void main() {
-  Mammal mammal = Mammal();
-  mammal.aaa(10);
-  mammal.eat();
-  mammal.sleep();
+  Dog myDog = Dog();
+  Animal animal = Animal();
+  // myDog.eat();
+  myDog.bark();
+  animal.eat();
 }
+// Yahan 'Dog' class 'Animal' class ko 'extends' karti hai. 
+// Iska matlab 'Dog' class ko 'Animal' class ke saare properties aur methods milte hain. 
+// 'Dog' class mein 'eat()' method ko directly use kar sakte hain 
+//jo 'Animal' class se aaya hai.
