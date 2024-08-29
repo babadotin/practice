@@ -123,13 +123,11 @@ class Bird extends Animal with Pet, Flyer {
 
 void main() {
   Bird myBird = Bird();
-  Pet myPet =Pet();
-  Flyer myFlyer =Flyer();
-
+  Pet myPet = Pet();
+  Flyer myFlyer = Flyer();
   myBird.eat();
   myBird.play();
   myBird.fly();
   myFlyer.fly();
   myPet.play();
-
 }
